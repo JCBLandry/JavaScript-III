@@ -22,7 +22,7 @@ function GameObject(attribute){
   }
   
   GameObject.prototype.destroy = function () {
-    console.log(`${this.name} was removed from the game.`);
+    return (`${this.name} was removed from the game.`);
   };
   /*
     === CharacterStats ===
@@ -36,7 +36,7 @@ function GameObject(attribute){
     };
   CharacterStats.prototype = Object.create(GameObject.prototype);
   CharacterStats.prototype.takeDamage = function () {
-    console.log(`${this.name} took damage.`);
+    return (`${this.name} took damage.`);
   };
   
   /*
@@ -57,7 +57,7 @@ function GameObject(attribute){
      };
   Humanoid.prototype = Object.create(CharacterStats.prototype);
   Humanoid.prototype.greet = function () {
-    console.log(`${this.name} offers a greeting in ${this.language}.`);
+    return (`${this.name} offers a greeting in ${this.language}.`);
   };
   /*
     * Inheritance chain: GameObject -> CharacterStats -> Humanoid
